@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "RobotoBold";
+  font-style: bold;
+  font-weight: 700;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  font-size: 1.6rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+.card {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.card.hide {
+  display: none;
+}
+
+.signUp {
+  padding: 2.5rem;
+}
+.signUp h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "RobotoBold";
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+.signUp p {
+  font-size: 1.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 4.5rem;
+}
+
+ul li::marker {
+  content: url(assets/images/icon-list.svg);
+  padding: 0;
+}
+
+li {
+  padding-left: 1.5rem;
+  font-size: 1.7rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+form input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+  height: 5.5rem;
+  margin-bottom: 2rem;
+}
+
+form input:focus {
+  outline: 1px solid hsl(235, 18%, 26%);
+}
+
+.btn {
+  background-color: hsl(235, 18%, 26%);
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  height: 5.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #c8475a, #cc5335);
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  color: #cc5335;
+}
+
+/* ---------------------------- */
+
+.success {
+  padding: 2.5rem;
+  margin-top: 14rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.success.hide {
+  display: none;
+}
+.success__body h1 {
+  font-size: 3rem;
+  padding-right: 3rem;
+}
+.success__body p {
+  margin-bottom: 26rem;
+}
+.email {
+  font-weight: 700;
+}
+
+/* ------------------------------ */
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+    display: grid;
+    place-items: center;
+  }
+
+  .right img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .card {
+    display: flex;
+    max-width: 929px;
+    flex-direction: row-reverse;
+    border: 1px solid;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    gap: 6rem;
+  }
+
+  .signUp h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    font-family: "RobotoBold";
+    margin-bottom: 0;
+  }
+
+  .success {
+    max-width: 50rem;
+    padding: 6.3rem;
+    border-radius: 15px;
+  }
+
+  .success__body h1 {
+    font-size: 4.75rem;
+  }
+  .success__body p {
+    margin-bottom: 5.5rem;
+    line-height: 1.6;
+  }
+
+  .btn {
+    font-family: "RobotoBold";
+    margin-bottom: 5.5rem;
+    border-radius: 10px;
+  }
+}
